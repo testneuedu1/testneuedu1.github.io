@@ -1,37 +1,99 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
 
-You can use the [editor on GitHub](https://github.com/testneuedu1/testneuedu1.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+* {
+  padding: 0;
+  margin: 0;
+}
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+body {
+  background-color: rgb(41, 45, 62);
+}
 
-### Markdown
+.container {
+  font-size: 120px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 
-```markdown
-Syntax highlighted code block
+.text {
+  fill: none;
+  stroke-width: 5;
+  stroke-dasharray: 0 240;
+  stroke-dashoffset: 0;
+}
 
-# Header 1
-## Header 2
-### Header 3
+.text:nth-child(4n + 1) {
+  stroke: rgb(39, 135, 238);
+  animation: text1 4s ease-in-out forwards;
+}
+.text:nth-child(4n + 2) {
+  stroke: rgb(47, 169, 92);
+  animation: text2 4s ease-in-out forwards;
+}
+.text:nth-child(4n + 3) {
+  stroke: rgb(249, 189, 56);
+  animation: text3 4s ease-in-out forwards;
+}
+.text:nth-child(4n + 4) {
+  stroke: rgb(235, 61, 50);
+  animation: text4 4s ease-in-out forwards;
+}
 
-- Bulleted
-- List
+@keyframes text1 {
+  100% {
+    stroke-dashoffset: 1000;
+    stroke-dasharray: 60 180;
+  }
+}
 
-1. Numbered
-2. List
+@keyframes text2 {
+  100% {
+    stroke-dashoffset: 1060;
+    stroke-dasharray: 60 180;
+  }
+}
 
-**Bold** and _Italic_ and `Code` text
+@keyframes text3 {
+  100% {
+    stroke-dashoffset: 1120;
+    stroke-dasharray: 60 180;
+  }
+}
 
-[Link](url) and ![Image](src)
-```
+@keyframes text4 {
+  100% {
+    stroke-dashoffset: 1180;
+    stroke-dasharray: 60 180;
+  }
+}
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+</style>
+</head>
+<body>
+<div class="container">
+    <svg viewBox="0 0 1000 300">
+      <symbol id="line-text">
+        <text text-anchor="middle" x="50%" y="50%" dy=".4em">
+         谢谢大家
+        </text>
+      </symbol>
+      <use xlink:href="#line-text" class="text"></use>
+      <use xlink:href="#line-text" class="text"></use>
+      <use xlink:href="#line-text" class="text"></use>
+      <use xlink:href="#line-text" class="text"></use>
+    </svg>
+  </div>
+</body>
+</html>
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/testneuedu1/testneuedu1.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
